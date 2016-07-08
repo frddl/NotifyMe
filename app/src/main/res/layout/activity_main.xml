@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="app.faridmammadov.notifyme.MainActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="c u s t o m   n o t i f i c a t i o n s   a t\ny o u r   f i n g e r t i p s"
+        android:id="@+id/label"
+        android:textColor="#757575"
+        android:fontFamily="sans-serif-thin"
+        android:textIsSelectable="false"
+        android:textSize="20dp"
+        android:layout_below="@+id/title"
+        android:layout_alignRight="@+id/title"
+        android:layout_alignEnd="@+id/title"
+        android:textStyle="italic"
+        android:gravity="right" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="NotifyMe!"
+        android:id="@+id/title"
+        android:gravity="center"
+        android:fontFamily="sans-serif-thin"
+        android:textSize="45dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="35dp" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/nTitle"
+        android:layout_below="@+id/label"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:hint="T I T L E"
+        android:textAlignment="textEnd"
+        android:fontFamily="sans-serif-thin"
+        android:textColor="#757575"
+        android:textSize="20dp"
+        android:linksClickable="false"
+        android:singleLine="true"
+        android:nextFocusDown="@+id/nDescription"
+        />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/nDescription"
+        android:layout_below="@+id/nTitle"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:hint="D E S C R I P T I O N"
+        android:textAlignment="textEnd"
+        android:textColor="#757575"
+        android:fontFamily="sans-serif-thin"
+        android:textSize="20dp"
+        android:singleLine="true"
+        android:layout_marginTop="5dp"
+        android:nextFocusDown="@+id/pickIcon"
+        />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="R E S E T"
+        android:id="@+id/reset"
+        android:fontFamily="sans-serif-thin"
+        android:textColor="#757575"
+        android:textSize="20dp"
+        android:layout_above="@+id/textView"
+        android:layout_marginBottom="20dp"
+        android:gravity="center"
+        android:layout_toLeftOf="@+id/title"
+        android:layout_toStartOf="@+id/title" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="P I C K   A N   I C O N "
+        android:id="@+id/pickIcon"
+        android:gravity="right"
+        android:fontFamily="sans-serif-thin"
+        android:textSize="20dp"
+        android:layout_centerVertical="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="5dp"
+        android:layout_below="@+id/nDescription"
+        android:layout_marginTop="30dp"
+        android:layout_alignRight="@+id/nDescription"
+        android:layout_alignEnd="@+id/label" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/error"
+        android:clickable="true"
+        android:src="@drawable/ic_error_outline_white_48dp"
+        android:layout_below="@+id/pickIcon"
+        android:layout_alignRight="@+id/label"
+        android:layout_alignEnd="@+id/label" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/highPriority"
+        android:clickable="true"
+        android:src="@drawable/ic_priority_high_white_48dp"
+        android:layout_below="@+id/pickIcon"
+        android:layout_toLeftOf="@+id/error"
+        android:layout_toStartOf="@+id/error" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/alarmClock"
+        android:clickable="true"
+        android:src="@drawable/ic_notifications_active_white_48dp"
+        android:layout_below="@+id/pickIcon"
+        android:layout_toLeftOf="@+id/highPriority"
+        android:layout_toStartOf="@+id/highPriority" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/plusOne"
+        android:clickable="true"
+        android:src="@drawable/ic_plus_one_white_48dp"
+        android:adjustViewBounds="false"
+        android:layout_below="@+id/pickIcon"
+        android:layout_toLeftOf="@+id/alarmClock"
+        android:layout_toStartOf="@+id/alarmClock" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="T h a n k   y o u   f o r   u s i n g   # N o t i f y M e !\nC r e a t e d   b y   F a r i d   M a m m a d o v"
+        android:id="@+id/textView"
+        android:gravity="center"
+        android:fontFamily="sans-serif-thin"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="10dp" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="C R E A T E"
+        android:id="@+id/create"
+        android:fontFamily="sans-serif-thin"
+        android:textColor="#757575"
+        android:textSize="20dp"
+        android:gravity="center"
+        android:layout_alignBottom="@+id/reset"
+        android:layout_toRightOf="@+id/reset"
+        android:layout_toEndOf="@+id/reset" />
+
+</RelativeLayout>
